@@ -1,0 +1,8 @@
+%header
+  %h1= @category.name
+  %br
+  .videos.row
+    -@category.videos.each do |video|
+      .video.col-sm-2
+        =link_to image_tag("#{video.small_cover_url}"), video_path(video)
+  %br
